@@ -7,3 +7,7 @@
 * [Improving Enterprise Workflows with SRE Best Practices](/establishing-a-foundation-in-observability/improving-enterprise-workflows-with-sre-best-practices.md)
 * [SRE Teams](/establishing-a-foundation-in-observability/sre-teams.md)
 * [Monitoring System Performance](/establishing-a-foundation-in-observability/monitoring-system-performance.md)
+
+## Planning for High Availability and Incident Response
+
+* Introduction
