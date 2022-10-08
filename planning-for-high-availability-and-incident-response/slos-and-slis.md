@@ -35,3 +35,14 @@
     * SLI: search_query_return_time < 3s [60m]
 * SLO #4: Application errors out less than 5 times in 1 minute
     * SLI: application_crashes < 5 times [1m]
+
+## Defining Good SLOs
+
+**Bad**
+* Very generic and not specific
+* Do not indicate an application is functioning properly
+* Don't tell specifics about application performance
+
+**Good**
+* Have specific time frames and speficif goals
+* Indicate a specific user experience goal such as application responsiveness
