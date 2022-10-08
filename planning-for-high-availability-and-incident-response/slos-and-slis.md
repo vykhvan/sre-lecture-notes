@@ -46,3 +46,78 @@
 **Good**
 * Have specific time frames and speficif goals
 * Indicate a specific user experience goal such as application responsiveness
+
+## Categories for SLOs
+
+### Availability
+* Availability means if the application is available to users
+* SLO
+    * Successful requests to the application
+    * Health checks
+* Ex: application is up 99% of time over the last 7 days
+    * Specific goals: 99%
+    * Specific time frame: 7 days
+    * SLI: total # successful requests / total # requests
+
+### Error Budget
+* Error budget: how much the infrastructure is allowed or budgeted for to be down for a period of time
+    * Include outages and maintenance
+* 10% error budget means
+    * Serve 10% failed requests (e.g. 10 fails if you only have 100 requests in month)
+    * 90% **availability**
+        * ```availability = 1 - error budget```
+    * 40% **usage** of error budget if 4 errors has occured
+        * ```usage = (error occured)/(error budget)```
+    * 60% **usage remaining** if 4 errors has occured
+        * ```usage remaining = 1 - error budget usage```
+* SLO:
+    * Looks at the number of failures, typically in percentage
+    * Goal is to have low numbers
+    * Can be displayed in remaining error budget
+* Ex: Over the last 30 days have less than 10% of results return failures
+    * Specific time frame: 30 days
+    * Specific goal: 10% of results returned failures
+    * SLI: number of error requests / total number of requests in budget
+
+### Latency
+* Latency: how fast you want your application to respond
+* SLO:
+    * Generally measured in milliseconds (ms)
+    * Use a percentage of requests
+    * Quantiles not averages
+* Ex: 90% requests are served within 50ms
+    * SLI: Histogram buckets
+        * requests and associated latency
+        * A 90th percentile over a 5 mins period shows the top 90% latency for requests over a 5 mins period
+
+### Freshness
+* Freshness: data being read is the freshest
+    * Fastest and most accurate
+* SLO:
+    * Most recently writeen
+* Ex: 90% of requests are being read from the cache or the most recent write over the last 5 minutes
+    * SLI: percentage of requests read from the cache / requests not read from cache
+
+### Correctness
+* Correctness: the data returned by an application conforms to a good known dataset
+* SLO:
+    * Goal is to have a high percentage
+* Ex: 99.9% of records compared are correct
+    * SLI: count of all requests that are correct / count of all requests
+
+### Throughput
+* Throughput: how much can you site handle
+* SLO:
+    * Often measured in requests per seconds (RPS)
+    * Sometimes target just successful requests
+* Ex: site reaches 1000 RPS over the last 5 minutes
+* Ex: (backend) database transaction stays above 1000 RPS over the last 10 minutes
+* Ex: (backend) database transaction stays below 1500 RPS over tha last 15 minutes
+* SLI: total number of requests over a period of time
+
+| Category | SLI | SLO |
+|----------|-----|-----|
+| Availability | Number of successful requests/total number of requests | 99% success |
+| Latency | Bucket of requests in a histogram showing the 95th percentile over the last 30 seconds | 90% of requests < 50 ms |
+| Throughput | Total number of requests | Maintain 1000 RPS |
+| Error Budget | 1 - availability | 10% error budget |
