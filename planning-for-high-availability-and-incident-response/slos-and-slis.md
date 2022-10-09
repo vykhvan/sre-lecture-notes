@@ -115,9 +115,39 @@
 * Ex: (backend) database transaction stays below 1500 RPS over tha last 15 minutes
 * SLI: total number of requests over a period of time
 
+### SLO/SLI Table
+
 | Category | SLI | SLO |
 |----------|-----|-----|
 | Availability | Number of successful requests/total number of requests | 99% success |
 | Latency | Bucket of requests in a histogram showing the 95th percentile over the last 30 seconds | 90% of requests < 50 ms |
 | Throughput | Total number of requests | Maintain 1000 RPS |
 | Error Budget | 1 - availability | 10% error budget |
+
+## Implementing SLOs and SLIs
+
+### Examples
+* SLO: 90% availability
+    * SLI: total number of successful requests / total number of requests
+    * Successful web request? Anything that is 2xx
+    * Query: ```http_request_total {code =~ "200"} / http_request_total```
+* SLO: 90% of requests served within 50ms over the last 30 seconds
+    * SLI: Bucket of requests in a histogram showing the 90th percentile over the last 30 seconds
+    * ```histogram_quantile(0.90, sum(rate(http_request_duration_seconds_bucket{job="website"}[30s])) by (le, verb))```
+* SLO: Throughput of 100 requests per second (RPS) over 5 minutes
+    * SLI: total number of successful requests over 5 minutes
+    * Query: ```sum(rate(http_request_total{code=~"2.."}[5m]))```
+* SLO: Error Budget of 10% over 7 days
+    * Error budget itself is static but how to display this can vary
+    * Remaining percentage of the error budget or how much is left of your 10%
+* Formulas:
+    * ```% error occured = 1 - compliance = 1 - successful requests/total requests```
+        * Ex: total of 100 requests and 97 are successful, so 97% are in compliance, 3% are erroneous
+    * ```error budget = 1 - availability```
+        * Ex: availability is 90%, so error budget is 10%
+    * ```% error used = % error occured/error budget```
+        * Ex: 3% error requests and the error budget is 10%, 30% of the error budget is used
+    * ```% remaining error budget = 1 - % error used```
+        * Ex: 30% of the error budget is used, meaning 70% of the error budget is remaining
+    * Query: ```1 - ((1 - sum(increase(http_request_total{job="webserver", code="200"}[7d])) by (verb) / sum(increase(http_request_total{job="webserver"}[7d])) by (verb)) / (1 - .90))```
+    
