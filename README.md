@@ -11,3 +11,4 @@
 ## Planning for High Availability and Incident Response
 
 * [Introduction](/planning-for-high-availability-and-incident-response/introduction.md)
+* [SLOs and SLIs](/planning-for-high-availability-and-incident-response/slos-and-slis.md)
