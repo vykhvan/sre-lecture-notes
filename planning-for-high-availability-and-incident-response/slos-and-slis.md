@@ -151,3 +151,19 @@
         * Ex: 30% of the error budget is used, meaning 70% of the error budget is remaining
     * Query: ```1 - ((1 - sum(increase(http_request_total{job="webserver", code="200"}[7d])) by (verb) / sum(increase(http_request_total{job="webserver"}[7d])) by (verb)) / (1 - .90))```
     
+## Concernts When Using SLOs and SLIs
+
+* Too many metrics?
+    * Slows down other systems or applications
+    * Many metrics to store and keep track of
+* Alert numbness
+    * Due to irrelevant alerts and inaccurate alerts
+    * SLO thresholds are too low
+    * Take wrong measurements
+* Lack of metrics
+    * Look at things other than the application
+    * Set a specific timeframe and make them as specific to the application as possible
+* Infrastructure metrics are still important!
+    * They may still indicate problems
+    * Be proactive and take action
+    * Set a specific timeframe and make them as specific to the application as possible
