@@ -67,3 +67,23 @@
 * You may not always know why the separation is there
 * Resources dictate separation
 * More risks: if one server fails, potentially more applications fail
+
+## Making Infrastructure Highly Available
+
+### High availability
+
+* Robust - resistant to many failuers
+* 2 is better than 1
+* Helps with maintenance
+* Failover - using an alternate instance of the application than what you were previously using
+    * flip the switch and start using the other instance of an application
+    * flip the switch and using your alternate location for disaster recovery purposes
+
+### HA Best Practices
+
+* **Voting system**
+    * Odd numbers instead of even
+* **Availability zones**
+    * Different physical locations in close proximity, typically 40-50 miles
+* **Regions**
+    * Different geographic locations for resources separated by hundreds of miles
