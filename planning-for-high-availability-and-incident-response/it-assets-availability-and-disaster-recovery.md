@@ -123,6 +123,6 @@
         * This can be done with a name provider like Amazon route 53
     * Failover your database replication instances to another region
         * Manually force the secondary region to become primary at the database level
-        * Automatically failober the database by health checks
+        * Automatically failover the database by health checks
 
 ![image](img/dr-plan-example.png)
