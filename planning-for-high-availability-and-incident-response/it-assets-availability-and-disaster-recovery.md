@@ -112,3 +112,17 @@
 * Database replication
     * Ensures your database is exactly the same in both locations
     * Automatic and seamless failover with database replication, making sure the database can come back online quickly with little to no changes
+
+### Basic DR Plan
+
+* Pre-Steps
+    * Ensure both sites are configured the same
+    * You can use infrastructure as code (IaC) to do this
+* Steps:
+    * Point your DNS to your secondary region
+        * This can be done with a name provider like Amazon route 53
+    * Failover your database replication instances to another region
+        * Manually force the secondary region to become primary at the database level
+        * Automatically failober the database by health checks
+
+![image](img/dr-plan-example.png)
