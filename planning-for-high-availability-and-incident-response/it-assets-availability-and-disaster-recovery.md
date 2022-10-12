@@ -87,3 +87,19 @@
     * Different physical locations in close proximity, typically 40-50 miles
 * **Regions**
     * Different geographic locations for resources separated by hundreds of miles
+
+## Creating a DR Plan
+
+### Disaster Recovery Principals
+
+* Ensure infrastructure is deployed in another location
+    * Configuration drift - any changes done at the primary site are not done at the DR site
+    * Automation can help prevent configuration drift
+    * If automation isn't an option, set up policy in the DR plan to continually check the DR site
+* Must be practiced
+    * Actually flowing some production traffic through DR is critical to ensure the infrastructure actually works
+    * Practicing annually or quarterly helps ensure the steps are still accurate and work as intended
+* Updated DR Plan often
+    * Remember that technology is always changing and the DR plan should change with it
+    * E.g. add server nodes to accommodate load - should be documented in the DR plan
+    * E.g. retire an application - should be removed from the DR plan
