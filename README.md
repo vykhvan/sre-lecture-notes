@@ -13,3 +13,4 @@
 * [Introduction](/planning-for-high-availability-and-incident-response/introduction.md)
 * [SLOs and SLIs](/planning-for-high-availability-and-incident-response/slos-and-slis.md)
 * [IT Assets, Availability and Disaster Recovery](/planning-for-high-availability-and-incident-response/it-assets-availability-and-disaster-recovery.md)
+* [Creating and deploying HA and DR infrastructure using Terraform](/planning-for-high-availability-and-incident-response/creating-and-deploying-ha-dr-infrastructure.md)
