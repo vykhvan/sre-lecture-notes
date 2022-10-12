@@ -103,3 +103,12 @@
     * Remember that technology is always changing and the DR plan should change with it
     * E.g. add server nodes to accommodate load - should be documented in the DR plan
     * E.g. retire an application - should be removed from the DR plan
+
+### Disaster Recovery Strategies
+
+* DNS - domain name system
+    * Users don't have to memorize IPs and can use friendly names
+    * DNS allows you to "hide" a specific IP of data center or sesrver to make failover more seamless
+* Database replication
+    * Ensures your database is exactly the same in both locations
+    * Automatic and seamless failover with database replication, making sure the database can come back online quickly with little to no changes
