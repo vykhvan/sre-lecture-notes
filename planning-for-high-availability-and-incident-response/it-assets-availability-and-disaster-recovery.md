@@ -126,3 +126,16 @@
         * Automatically failover the database by health checks
 
 ![image](img/dr-plan-example.png)
+
+### Costs of DR and Availability
+
+* Duplicate infrastructure in DR site leads to:
+    * Increase maintenance costs and licensing cost
+    * Increase overhead, such as mitigated with scripts and IaC
+    * Extra costs vs. losing all you infrastructure
+* DR is NOT backups
+    * Backups should always be used regardless of DR/HA plans
+    * Backups recover from data loss such as accidental deletion or malicious actors
+    * Backups are cheaper than other DR/HA methods
+    * But, backups also have the slowest recovery time
+    * DR/HA methods have faster recovery and replication time but they cannot be used to mitigate the risk of total data loss like backups can
