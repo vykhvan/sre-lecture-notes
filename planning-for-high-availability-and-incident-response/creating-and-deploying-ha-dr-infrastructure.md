@@ -76,3 +76,87 @@ resource "aws_instance" "aws_linux" {
 ### Module Blocks
 
 * Groups of reusable code
+
+## Deploying Assets via Terraform
+
+### Module Folder Structure
+
+* File names don't matter to Terraform
+
+```
+modules
+|__ec2
+   |__ec2.tf   -> defines the resource
+   |__ _var.tf -> contains variables
+   |__ _out.tf -> contains outputs
+```
+
+### Module Example - Resource Definition
+
+**ec2.tf**
+
+```
+resource "aws_instance" "aws_linux" {
+    ami           = var.aws_ami
+    count         = var.instance_count
+    instance_type = "t3.micro"
+    subnet_id     = var.public_subnet_ids[0]
+
+    tags = {
+        Name = "Web"
+    }
+}
+```
+
+### Module Example - Variables File
+
+**_var.tf**
+
+```
+variable "instance_count" {}
+variable "aws_ami" {}
+variable "public_subnet_ids" {}
+```
+
+* Setting the variables is required
+* Do NOT need to use all the variables defined in a module
+* A variable MUST be defined if you want to use it in a module
+
+### Module Example - Output File
+
+**_out.tf**
+
+```
+output "aws_instance" {
+    value = aws_instance.aws_linux
+}
+```
+
+### Module Usage
+
+* Call a module in a .tf file
+* A module can be called many times
+
+```
+module "project_ec2" {
+    source            = "./modules/ec2"
+    instance_count    = 2
+    aws_ami           = "ami-0b9064170e32bde34"
+    public_subnet_ids = module.vpc.public_subnet_ids
+}
+```
+
+### Example Project Structure
+
+```
+Project
+|__modules
+   |__ec2
+      |__ec2.tf
+      |__ _var.tf
+      |__ _out.tf
+   |__vpc
+|__main.tf        -> Defines shared deployment information
+|__ _config.tf    -> Contains configurations such as Terraform state
+|__ec2.tf
+```
