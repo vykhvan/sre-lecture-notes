@@ -85,10 +85,10 @@ resource "aws_instance" "aws_linux" {
 
 ```
 modules
-|__ec2
-   |__ec2.tf   -> defines the resource
-   |__ _var.tf -> contains variables
-   |__ _out.tf -> contains outputs
+|__ ec2
+    |__ ec2.tf   -> defines the resource
+    |__ _var.tf -> contains variables
+    |__ _out.tf -> contains outputs
 ```
 
 ### Module Example - Resource Definition
@@ -150,13 +150,13 @@ module "project_ec2" {
 
 ```
 Project
-|__modules
-   |__ec2
-      |__ec2.tf
-      |__ _var.tf
-      |__ _out.tf
-   |__vpc
-|__main.tf        -> Defines shared deployment information
-|__ _config.tf    -> Contains configurations such as Terraform state
-|__ec2.tf
+|__ modules
+    |__ ec2
+        |__ ec2.tf
+        |__ _var.tf
+        |__ _out.tf
+    |__ vpc
+|__ main.tf        -> Defines shared deployment information
+|__ _config.tf     -> Contains configurations such as Terraform state
+|__ ec2.tf
 ```
