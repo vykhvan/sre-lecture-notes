@@ -160,3 +160,25 @@ Project
 |__ _config.tf     -> Contains configurations such as Terraform state
 |__ ec2.tf
 ```
+
+## Deploy to Different Regions
+
+#### Terraform Project - Region 1
+
+```
+Project_region_1
+|__ modules
+|__ _config
+|__ main.tf
+|__ ec2.tf
+```
+
+#### Terraform Project - Region 2
+
+```
+Project_region_2
+|__ modules
+|__ _config
+|__ main.tf
+|__ ec2.tf
+```
