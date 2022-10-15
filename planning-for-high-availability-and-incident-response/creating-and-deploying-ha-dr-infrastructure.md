@@ -182,3 +182,16 @@ Project_region_2
 |__ main.tf
 |__ ec2.tf
 ```
+
+## When To Use And Not To Use Terraform
+
+### SRE Perspective
+
+* Infrastructure as Code increasing consistency
+    * Less tedios work
+    * More time to automate complex tasks
+
+### Downfall - Added Complexity
+
+* Small deployments
+* Low changes
