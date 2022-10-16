@@ -8,3 +8,52 @@
 * **R**ecovery **P**oint **O**bjective
     * How much data can we lose
     * Example: database will take backups every 15 minutes
+
+## Explore SQL Log Shipping
+
+* Recovery and replication mechanism for database management systems
+* Transaction: a completed query request
+    * E.g. adding an entry to a database
+* Transaction logs: log all transactions to files
+* Logs grow quickly and are rotated through quickly
+
+![image](img/basic-log-shipping.png)
+
+* Log shipping can be used for database recovery
+* The transaction logs live in each database cluster
+* Primary cluster writes to its transaction log and ships those logs to the secondary transaction log storage to restores the secondary database
+
+![image](img/log-shipping.png)
+
+* The database will be unavailable for reads or writes during the restore operation
+* The secondary instance can be used as a read-only copy
+* Best practice: nodes of the database cluster are in separate availability zones
+
+### Database Cluster Monitor
+
+* Alert when the secondary region goes offline
+* Alert when the secondary does not apply logs properly
+* Alert when the primary does not ship logs properly
+* Prevents the cluster from "self-checking"
+* Some can be used as a voting system
+
+### Properties of Log Shipping Recovery
+
+Pros:
+
+* Easy to setup
+    * Generally, no advanced setup and the secondary instance is easy to set up in another region
+* Low cost
+    * Generally, no additional software is required
+    * Generally, no additional hardware is required
+    * Low admin overhead
+
+Cons:
+
+* Manual failover
+    * Log shipping requires a manual failover to the secondary cluster
+    * May need to re-configure applications to point to the new primary cluster
+* Slow recovery
+    * Time required to fully apply the backup
+* Slow fail-back
+    * Must re-configure log shipping and perform a full restore to failback
