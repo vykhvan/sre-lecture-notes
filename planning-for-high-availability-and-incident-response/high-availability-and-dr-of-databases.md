@@ -57,3 +57,31 @@ Cons:
     * Time required to fully apply the backup
 * Slow fail-back
     * Must re-configure log shipping and perform a full restore to failback
+    
+## Geo-Replication for SQL Instances
+
+![image](img/basic-geo-replication.png)
+
+* Continuous data synchronization between regions
+* The secondary database can take over during a failure within seconds
+* Automatic failover!
+* Can flip the primary and secondary back
+    * A unique feature of geo-replication
+    * No technical requirements to run a primary in a particular zone
+
+**Pros**
+
+* Fast recovery
+    * No lag between the primary and secondary database clusters
+* Automatic failover
+    * The secondary can automatically promote itself
+    * The application can point to a DNS entry that can automatically flip
+* Seamless recovery
+
+**Cons**
+
+* Costly
+    * Requires additional software licensing and hardware
+* Setup is complex
+    * Requires additional software knowledge
+    * Requires additional monitoring
