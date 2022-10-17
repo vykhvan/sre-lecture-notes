@@ -85,3 +85,22 @@ Cons:
 * Setup is complex
     * Requires additional software knowledge
     * Requires additional monitoring
+
+## Implement Geo-Replication for SQL Instances
+
+### Implemantation
+
+```
+Project
+|__ Modules
+    |__ rds-p
+        |__ vars.tf
+        |__ rds.tf
+    |__ rds-s
+        |__ vars.tf
+        |__ rds.tf
+    |__ vpc
+|__ _config.tf
+|__ main.tf
+|__ rds.tf
+```
