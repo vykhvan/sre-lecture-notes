@@ -104,3 +104,44 @@ Project
 |__ main.tf
 |__ rds.tf
 ```
+
+## Automated Backups for SQL
+
+### Database Backups
+
+* Point in time snapshot of data
+* They can be taken in various frequency
+* They can retained for specific time frames
+* They can be stored in various repository types
+* One of the cheapset methods
+
+### Backups - Database Recovery
+
+* No form of replication
+* Backup is taken, stored and potentially never used
+* Restoring: pushing all the data from backups into an database
+* Entire block of data must be restored
+
+### Backups - Business Continuity
+
+* Backups restore from catastrophe
+    * Isolated from data corruption
+    * Isolated from regional and zone failures
+    * Isolated from any malicious actors or accidents in active regions
+
+### Backups - Implementation
+
+* Automatic backups
+    * Through platforms like AWS RDS
+    * Provider manages backups
+    * Less management work
+* More backups, longer retention means more cost
+    * AWs RDS is daily backups by default
+* Generally back up both regions but it's best to check documentation
+
+### Terraform
+
+* Backup in AWS RDS via Terraform
+    * Stored in S3 buckets
+    * Same regions as your database
+    * Can set up additional backup storage locations
