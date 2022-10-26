@@ -15,3 +15,7 @@
 * [IT Assets, Availability and Disaster Recovery](/planning-for-high-availability-and-incident-response/it-assets-availability-and-disaster-recovery.md)
 * [Creating and deploying HA and DR infrastructure using Terraform](/planning-for-high-availability-and-incident-response/creating-and-deploying-ha-dr-infrastructure.md)
 * [High Availability and DR of Databases](/planning-for-high-availability-and-incident-response/high-availability-and-dr-of-databases.md)
+
+## Self Healing Architectures
+
+* [Self-healing System Design Fundamentals](/self-healing-architectures/introduction-to-self-healing-architectures.md)
