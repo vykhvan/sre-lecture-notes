@@ -43,3 +43,29 @@
 * Complexity
 * Presentation & data layer separation
 * Increased testing requirements
+
+## Self-healing Automation Strategies
+
+### Automation Strategies
+
+* Scaling
+* Fault Tolerance
+* High Availability
+
+### System Design: Scaling
+
+* Scaling Up (+ Memory, + CPU)
+* Scaling Out (+ Replicas)
+* Scaling In (- Replicas)
+
+### System Design: Fault Tolerance
+
+Fault tolerance is the ability to continue operating despite failures or malfunctions.
+
+**Example: multi-region databases**
+
+### System Design: High Availability
+
+High availability is similar to fault tolerance in that it is the ability to continue operating despite failures or malfunctions.
+
+**Example: read and write replicas in databases**
