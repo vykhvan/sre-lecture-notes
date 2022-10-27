@@ -23,3 +23,23 @@
 
 **Modularity**
 * Break down components
+
+## Three-Tier Architecture
+
+* Presentation Layer, known as the frontend
+* An application layer, the backend
+* A data layer, the database, or data source
+
+**Pros**
+
+* Easy stack updated
+* Development team expertise
+* Greater reliability
+* Easier to scale
+* Innovation
+
+**Cons**
+
+* Complexity
+* Presentation & data layer separation
+* Increased testing requirements
