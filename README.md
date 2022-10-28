@@ -20,3 +20,4 @@
 
 * [Introduction to Self-Healing Architectures](/self-healing-architectures/introduction-to-self-healing-architectures.md)
 * [Self-healing System Design Fundamentals](/self-healing-architectures/self-healing-system-design-fundamentals.md)
+* [Self-healing Deployment Strategies](/self-healing-architectures/self-healing-deployment-strategies.md)
