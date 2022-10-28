@@ -69,3 +69,30 @@ Fault tolerance is the ability to continue operating despite failures or malfunc
 High availability is similar to fault tolerance in that it is the ability to continue operating despite failures or malfunctions.
 
 **Example: read and write replicas in databases**
+
+## Self-healing Micro-service Design
+
+### Self-Healing: Health Checks
+
+* Application API endpoint that provides status information
+* Text("OK")
+* Resource Utilization
+* Metadata
+
+### Self-Healing: Load Balancing
+
+Sending an equal amount of requests to a group of applications
+
+### Self-Healing: Change Management
+
+* Keeping track of change in an application
+* Version controlling releases to cloud environments
+
+### Self-Healing: Graceful Service Degradation
+
+* Gracefully shutdown after receiving a termination signal
+* Typically occurs during: Scale In Events New Deployments
+
+### Self-Healing: Rate Limiting
+
+* Cap the number of requests a microservice can handle
