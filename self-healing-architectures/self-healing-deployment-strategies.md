@@ -20,3 +20,23 @@ Active services are brought down together and replaced with the new version
 * Deploying to a lower environment
 * Application is not in use
 * During off-hours
+
+## Rolling Back Deployments
+
+### Rollback Deployment Scenarios
+
+* Errors on deployment completion
+* Broken functionality during deployment testing
+* Rejected version
+
+### Complications with Rollbacks & Databases
+
+**Rollbacks that include databases must be critically assessed:**
+
+* Deleted table rows
+* Populated new tables
+* Roll forward with backward compatible database changes
+
+Rolling forward with backward compatible database changes is possible following the **Expand/Contract** method
+
+![image](img/transition-period.png)
