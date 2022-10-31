@@ -67,3 +67,28 @@ Rolling forward with backward compatible database changes is possible following 
 * Useful when rolling out small changes to an application
 
 ![image](img/deployment-rolling.png)
+
+## Canary Deployments
+
+### Canary Deployments Pros and Cons
+
+* **Canary Deployment:** Deploying the new version of an application incrementally to a subset of users.
+* **Deployment Gate:** manually triggering the next phase of a deployment.
+
+![image](img/deployment-canary.png)
+
+**Pros**
+
+* Low Risk
+* Beta test new features with real users
+* Configurable deployment speed
+* Cheaper than Blue-green
+* Easy to rollback*
+
+**Cons**
+
+* Multiple active versions
+* Feature Flags in application code
+* Testing with real users
+* Complex deployment automation
+* Manual verification
