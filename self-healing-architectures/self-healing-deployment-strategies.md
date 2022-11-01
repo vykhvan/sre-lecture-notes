@@ -92,3 +92,28 @@ Rolling forward with backward compatible database changes is possible following 
 * Testing with real users
 * Complex deployment automation
 * Manual verification
+
+## Deployment Strategies: Blue/Green
+
+* Duplicate environments
+* Load balance between environments
+
+![image](img/deployment-blue-green.png)
+
+**Pros:**
+
+* Safest way to deploy an application
+* Zero downtime
+* Route subset of users to new version
+* Safe environment to smoke test
+
+**Cons:**
+
+* Expensive
+* Complex database schema changes
+* Complex deployment scripts
+
+**Usage scenarios:**
+
+* When you have a monolithic application that takes a long time to deploy
+* when you want full control over which users have access to the new version
