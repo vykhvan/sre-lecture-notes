@@ -7,7 +7,7 @@
 **Event Types**
 
 * Resource Utilization
-    * CPu
+    * CPU
     * Memory
 * Custom Metrics
 * Manual
