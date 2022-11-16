@@ -106,3 +106,55 @@ To identify an incident, you should review the following metrics:
     * Future steps for incident prevention
     * Basis for action plan in post-mortem
     * General fixes that should be implemented
+
+## On-Call Best Practices
+
+### Balanced On-Call Shifts
+
+* Balancing time spent on-call
+* Higher stress leads to lower performance, high burnout and turnover
+* Balance on-call with operational work
+* Operational work accomplishes longer-term reliability objectives
+
+### Documenting On-Call Events: Alerts and Pages
+
+* Document alers and pages during on-call shift
+* Quantify the quality of on-call shifts
+* Review frequency and types of alerts/pages for underlying issues
+* Hand over on-call duties to the team that developed it
+
+### Documenting On-Call Events: Alert Resolution
+
+* Track alert resolution
+    * Starting point for future troubleshooting
+    * Automation opportunities
+* Create an **on-call log** with summaries of all the events
+    * Date & time
+    * Summary
+    * Resolution
+    * Store in a central and accessible place; review regularly
+    * Make logs searchable
+
+### Correcting Unbalanced On-Calls
+
+* Regularly review on-call logs to look for trouble spots
+    * Look at monitoring and alert thresholds
+    * Consider underlying issues
+    * Pass off on-call duties to maintainers
+    * Set a reasonable goal for taking back alerts
+* Dedicated SRE to improve best practices
+
+### On-Call Best Practices
+
+* Document processes in your on-call
+* On-call procedure should be well-defined, documented, and accessible
+* Establish a clear path for handling alerts
+* Escalation procedures define
+    * When escalation is required and who to escalate to
+    * What happens if a page is not respond
+    * Secondary on-call person
+* Incident management procedure for on-call engineer's reference
+    * Keep everyone in sync
+    * Reduce anxiety and empower on-call engineer
+* What happens after an incident
+    * Discuss and solve root cause blamelessy
