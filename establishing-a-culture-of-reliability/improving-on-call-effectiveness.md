@@ -2,6 +2,8 @@
 
 ## Introduction to Improving On-call Effectiveness
 
+**On-Call:** The period of time when you are responsible for responding to issues. Most teams use some sort of “paging” service to alert the on-call engineer to an issue.
+
 ### Effective On-Calls
 
 * Balanced between operational work and on-call work
