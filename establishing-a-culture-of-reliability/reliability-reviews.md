@@ -140,3 +140,78 @@ All test suites are passing 100%.
 The database admins asked for an additional set of scripts to be run for data corrections.
 
 --------------------------------------------
+
+## Performing a Launch Review
+
+### Version Control
+
+* Vital for managing changes in a system/application
+* Implement safeguards
+* Branching model and process for adding code
+* Document process for future reference
+
+### New release
+
+* Nail down the release process
+* Schedule
+* Automation
+* Document process
+
+### Testing
+
+* Build a solid testing plan
+* Include functional and non-functional tests
+* Identify testing blindspots
+* Double-check your triage process
+* Automate your test suite
+
+### Build Process
+
+* Schedule
+    * On regualr schedule or triggered by events
+    * Automate the build process
+* Integration
+    * Test to validate the code
+    * Integration with version control
+    * Deployment process
+* Completed builds
+    * Save every build or just specific builds
+
+### Indentifying Reliability Risks
+
+**System Risks**
+
+* Connectivity: How system components "talk" to each other
+* Compliance: Handling compliance needs
+* Security: Ensuring data integrity
+
+**Resource**
+
+* Often overlooked as a reliability risk
+* Review your monitoring setup for blind spots
+* Organize monitored data in a logical way
+
+**Monitoring**
+
+* Have the correct amount of resources available
+* Physical (CPU/RAM/storage)
+* Networking (bandwidth/latency)
+
+**Services**
+
+* External
+    * Potential impact of service outage and mitigations
+    * Keep the contacts for each service vender
+    * Create self-hosted mirrors where possible
+* Internal
+    * Redundancy with automated failover
+    * Spread hosted services
+
+### Launch Review Checklist
+
+* Guide your launch process
+* Flexible for any launch
+* Review the entire system for reliability risks
+
+1. Questions for guiding the important parts for review.
+2. Action items to complete before launch.
