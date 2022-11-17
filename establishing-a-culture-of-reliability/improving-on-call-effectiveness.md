@@ -158,3 +158,44 @@ To identify an incident, you should review the following metrics:
     * Reduce anxiety and empower on-call engineer
 * What happens after an incident
     * Discuss and solve root cause blamelessy
+
+## Post-Mortem Best Practices
+
+### What is a "Blameless" Culture?
+
+* How we react after an incident
+* Establish root cause and future prevention
+* Enforce accountability over blame
+* No good to assign blame
+* Focus on the why, not the who
+
+### Post-Mortem: What and When?
+
+**Post-Mortem = Root Cause Analysis**
+
+* Determine the cause of the issue
+    * Discuss the cause and dig deeper
+* Describe the incident with an action plan
+    * A clear plan to address the root cause
+
+### Documenting a Post-Mortem
+
+* Similar to the live state document kept during incident
+* Goal if different:
+    * Live state document: Keep a log of current state
+    * Post-mortem: Impact and resulting action plan
+
+### Structure of a Post-Mortem
+
+1. Stakeholders
+2. Timeline
+3. Impact Assessment
+4. Resolution
+    * What actions were necessary and why
+5. Action Plan
+
+### Review Post-Mortems
+
+* Practice makes perfect
+* Double-check remediation
+* Process review
