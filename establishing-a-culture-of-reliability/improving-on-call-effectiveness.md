@@ -201,3 +201,25 @@ To identify an incident, you should review the following metrics:
 * Practice makes perfect
 * Double-check remediation
 * Process review
+
+## Analyzing-reliability-risks
+
+![image](img/reliability-reviews.png)
+
+### Known issues
+
+* Find patterns to alerts/issues
+* Dig down to root causes
+* Example: Suppressing alerts
+* Ensure known issues are handled/remediated
+
+### As-built Document
+
+* Compare current risks to those in the post-mortem
+* Look for the same signs of reliability
+
+### Launch Reviews
+
+* Make sure checklist is complete
+* Compare as-built to launch review to track changes
+* Update your launch review checklist to include any missed sections
