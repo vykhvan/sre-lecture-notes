@@ -20,3 +20,27 @@
     * Response times
         * Direct measure of how your user experiences your system.
         * Higher response times = poor user experience.
+
+## Analyzing System Requirements
+
+### Redundancy
+
+* Multiple instanced of a service
+* Multiple environments across different regions
+* Increases reliability
+* Increases performance
+* Increases responsiveness
+* Greater flexibility
+
+### Resource Needs
+
+* Physical resource needs
+* Load Testing
+* Start as early as possible
+* Generalize system function
+
+### User Expectations
+
+* Longer response times may be ok with large datasets
+* Long response times my NOT be okay with time-sensitive transactions
+* Be realistic about system capacity
