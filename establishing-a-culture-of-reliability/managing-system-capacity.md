@@ -66,3 +66,26 @@
 * **User experience**
     * Metrics include response times and error rates.
     * The higher these metrics, the poorer the user experience. This should be handled immediately.
+
+### Mitigating Capacity Issues
+
+* **Emergency capacity tier**
+    * Emergency capacity is your first line of defense against capacity overload.
+    * As you reach your capacity threshold, you should bring the extra capacity online quickly to relieve pressure on the system.
+    * Return resources to the powered-down state after the need has passed.
+    * Automate the process of bringing resources online and powering them down if possible.
+
+### Overwhelming Demand
+
+* **Load shedding**
+    * Reduce load on the system by rejecting new requests.
+    * Allows the system to focus on the existing workload.
+* **Graceful degradation**
+    * Stop performing non-critical tasks.
+    * Frees resources for tasks that are vital to the system.
+* **Timeouts**
+    * Requests should eventually time out.
+    * Prevents requests from building up that will never be fulfilled.
+* **Denial of Service (DoS) prevention**
+    * Have protections in place to prevent DoS attacks.
+    * A security measure to prevent bad actors from flooding your system with illegitimate requests.
