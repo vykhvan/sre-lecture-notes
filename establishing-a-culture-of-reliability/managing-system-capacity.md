@@ -44,3 +44,27 @@
 * Longer response times may be ok with large datasets
 * Long response times my NOT be okay with time-sensitive transactions
 * Be realistic about system capacity
+
+## Tiered Capacity Management
+
+* Resource usage
+* Demand
+* Present and future
+
+### Short-Term Capacity
+
+* Load testing results -> Current user count
+* Current resource usage -> Resource usage
+
+### Long-Term Capacity
+
+* Resources reserved for system's growth
+* Plan carefully
+* Maintain good user experience without wasting $
+
+### Emergency Capacity
+
+* Demand > system resources
+* Handle demand surge
+* Less constly than having idle resources
+* Better user experience
